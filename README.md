@@ -86,7 +86,7 @@ x,y
 - This method works well in **simulated environments** or small, structured maps.
 
 
-### Part02: Launching the ROS Node
+### Part02 - Falconsim : Launching the ROS Node
 
 **Source ROS Environment:**  
 Make sure your ROS environment is properly set up by running the following command
