@@ -1,5 +1,6 @@
 # Gazebo Visualization : A* Navigation using Open-Loop Control (ROS2)
 
+Video link : https://drive.google.com/file/d/1lLRI2JweKauwgOPnFydHdjiqTeLnOuYo/view?usp=sharing
 This ROS2 Python package implements a simple open-loop control strategy to navigate a robot along path generated from a star algorithm and is stored in a CSV file. It is designed for differential drive robots and assumes a known initial pose.
 
 ## **Input**:
