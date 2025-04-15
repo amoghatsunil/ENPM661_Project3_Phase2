@@ -72,6 +72,11 @@ x,y
    ```bash
    ros2 run pkg_name go_to_point
    ```
+   or
+   run inside scripts/
+   ```bash
+   python3 nav.py
+   ```
 
 ---
 
