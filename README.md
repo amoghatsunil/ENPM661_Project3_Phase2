@@ -1,4 +1,4 @@
-# Gazebo Visualization : A* Navigation using Open-Loop Control (ROS2)
+# Gazebo Visualization : A* Navigation using Open-Loop Control (ROS2) (nav.py)
 
 Video link : https://drive.google.com/file/d/1lLRI2JweKauwgOPnFydHdjiqTeLnOuYo/view?usp=sharing
 
