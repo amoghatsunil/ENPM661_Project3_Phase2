@@ -1,3 +1,87 @@
+# A* Path Planning for Differential Drive Robot (Non-Holonomic Constraints) (final_version.py)
+
+This Python project implements an A* search algorithm for a differential drive robot with non-holonomic motion constraints. 
+It plans a path in a 2D environment with obstacles, considering robot geometry, clearance, and live visualization using matplotlib.
+
+## Note
+For this visualization, all meter values have been multiplied by 200 for visualization purposes
+
+## Features
+- Non-holonomic motion modeled for a differential-drive robot
+- Discretized configuration space: (x, y, θ)
+- Obstacle and clearance zone generation with OpenCV
+- Interactive input of start and goal positions (with validation)
+- Motion using real-world robot parameters (wheel radius, axle length)
+- Multiple action sets using user-defined wheel angular velocities
+- Live path planning visualization with:
+  - Tree expansion (gray for actions, yellow for explored, purple for frontier)
+  - Final path (blue)
+  - Saves actions along final path to final_path_actions.txt
+
+## Requirements
+- Install matplotlib
+- Import following libraries and packages
+  - time
+  - cv2
+  - heapq
+  - matplotlib.pyplot
+  - math
+  - numpy
+  - colors from matplotlin
+
+## Map Details
+- Canvas size: 5.4m × 3m (scaled to 1080 × 600 pixels)
+- Map contains predefined shaped obstacles:
+  - Vertical bars of 0.5 m (scaled for map by multiplying by 200)
+- Obstacles are inflated using your provided robot radius + clearance
+- Robot has:
+  - Radius = 0.22m (multiply every 1 m value by 200)
+  - Wheel radius = 0.0335m (multiply every 1 m value by 200)
+  - Distance between wheels = 0.16m (multiply every 1 m value by 200)
+
+## User
+User will enter
+- Robot clearance in mm
+- 2 angular velocity values
+- Start and goal node (x,y, theta)
+    
+## Algorithm
+- Nodes are stored in x,y,theta with resolution of :
+  - 0.1 for x and y
+  - 30 degrees for theta
+- 8 action set
+  - [0,v1]
+  - [v1,0]
+  - [v1,v1]
+  - [0,v2]
+  - [v2,0]
+  - [v2,v2]
+  - [v1,v2]
+  - [v2,v1]
+- Cost function computes trajectory for each wheel input pair
+- Search visualizes:
+  - Start: Red 'X'
+  - Goal: Green 'X'
+  - Goal zone: Red circle (radius = 0.25m)
+   
+## Output
+- Live animation with matplotlib
+- Final path in blue
+- Saved file in final_path_actions.txt with wheel velocity of each backtracked path action
+
+## Visualization
+  Input commands
+  
+  ![image](https://github.com/user-attachments/assets/3a4e9228-7982-4c5a-833f-b48642f81b8e)
+
+  Visualization
+  
+  ![image](https://github.com/user-attachments/assets/2ed972af-4ff8-4c2f-9004-5d6df898c92f)
+
+
+
+
+
 # Gazebo Visualization : A* Navigation using Open-Loop Control (ROS2) (nav.py)
 
 Video link : https://drive.google.com/file/d/1lLRI2JweKauwgOPnFydHdjiqTeLnOuYo/view?usp=sharing
@@ -108,3 +192,16 @@ ros2 launch astar_falcon_planner ros_falcon_astar.launch.py \
     wheel_distance:=0.16 \
     rpms:="[50.0, 50.0]"
 ```
+
+## Author 
+ - Sagar Vijayakumar
+   - UID : 116425438
+   - sagvijay@umd.edu
+       
+ - Shreya Kalyanaraman
+    - UID : 121166647
+    - shreya05@umd.edu
+         
+ - Amogha Sunil
+    - UID : 121098719
+    - amoghats@umd.edu    
