@@ -171,6 +171,7 @@ x,y
 
 
 ### Part02 - Falconsim : Launching the ROS Node
+Video Link : https://drive.google.com/file/d/1fLp9lNbKpIPAkeeVlLxAFEVBNpHiEHE1/view?usp=sharing
 
 **Source ROS Environment:**  
 Make sure your ROS environment is properly set up by running the following command
