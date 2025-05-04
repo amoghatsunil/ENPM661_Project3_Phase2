@@ -73,7 +73,6 @@ install(DIRECTORY include/
 
 # Install python scripts
 install(PROGRAMS 
-  scripts/pub.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
