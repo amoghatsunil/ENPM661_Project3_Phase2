@@ -162,8 +162,16 @@ x,y
    ```bash
    python3 nav.py
    ```
-
 ---
+
+Steps to run phase 2
+1. git clone https://github.com/amoghatsunil/ENPM661_Project3_Phase2
+3. export TURTLEBOT3_MODEL=waffle
+4. ros2 launch ros2 launch enpm673_final_proj enpm673_world.launch.py 
+In a new terminal, run 
+5. cd ENPM661_Project3_Phase2/scripts
+6. python3 a_star.py     (this will generate path.csv file)
+7. python3 nav.py  (runs on gazebo simulation
 
 - The robot uses `/cmd_vel` to publish `geometry_msgs/Twist` commands.
 - Motion is time-based and may drift over long distances.
